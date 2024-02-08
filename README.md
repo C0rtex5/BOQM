@@ -1,2 +1,1 @@
-# BOQM
-Blender object quick menu
+# BOQM (Blender object quick menu)
