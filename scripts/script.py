@@ -3,7 +3,7 @@ bl_info = {
     "description": "Blender object quick menu",
     "author": "c0rtex",
     "version": (0, 0, 1),
-    "blender": (2, 9, 0),
+    "blender": (4, 0, 0),
     "location": "View3D",
     "warning": "This addon still in it's alpha development.",
     "wiki_url": "",
