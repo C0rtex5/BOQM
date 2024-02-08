@@ -1,3 +1,15 @@
+bl_info = {
+    "name": "BOQM",
+    "description": "Blender object quick menu",
+    "author": "c0rtex",
+    "version": (0, 0, 1),
+    "blender": (2, 9, 0),
+    "location": "View3D",
+    "warning": "This addon still in it's alpha development.",
+    "wiki_url": "",
+    "category": "Add Mesh" }
+    
+
 import bpy
 
 class VIEW3D_PT_BOQM(bpy.types.Panel):
