@@ -7,8 +7,7 @@ bl_info = {
     "location": "View3D",
     "warning": "This addon still in it's alpha development.",
     "wiki_url": "",
-    "category": "Add Mesh" }
-    
+    "category": "Add Mesh" }    
 
 import bpy
 
