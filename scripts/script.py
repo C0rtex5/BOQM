@@ -6,7 +6,7 @@ bl_info = {
     "blender": (4, 0, 0),
     "location": "View3D",
     "warning": "This addon still in it's alpha development.",
-    "wiki_url": "",
+    "wiki_url": "https://github.com/C0rtex5/BOQM/wiki",
     "category": "Add Mesh" }    
 
 import bpy
