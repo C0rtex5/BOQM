@@ -7,7 +7,8 @@ bl_info = {
     "location": "View3D",
     "warning": "This addon still in it's alpha development.",
     "wiki_url": "https://github.com/C0rtex5/BOQM/wiki",
-    "category": "Add Mesh" }    
+    "category": "Add Mesh"
+}
 
 import bpy
 
@@ -29,7 +30,9 @@ class VIEW3D_PT_BOQM(bpy.types.Panel):
         layout.row().operator("mesh.primitive_cone_add", text="Add Cone")
         layout.row().operator("mesh.primitive_ico_sphere_add", text="Add Icosphere")
         layout.row().operator("mesh.primitive_plane_add", text="Add Plane")
-
+        layout.row().operator("mesh.primitive_monkey_add", text="Add Monkey") 
+        layout.row().operator("mesh.primitive_torus_add", text="Add Torus")   
+        
 def register():
     bpy.utils.register_class(VIEW3D_PT_BOQM)
 
