@@ -1,26 +1,25 @@
 bl_info = {
     "name": "BOQM",
-    "description": "Blender object quick menu",
+    "description": "Blender Object Quick Menu",
     "author": "c0rtex",
     "version": (0, 0, 1),
     "blender": (4, 0, 0),
-    "location": "View3D",
-    "warning": "This addon still in it's alpha development.",
-    "wiki_url": "https://github.com/C0rtex5/BOQM/wiki",
+    "location": "Productivity",
+    "warning": "This addon is in its alpha development.",
     "category": "Add Mesh"
 }
 
 import bpy
-
+from bpy.types import Menu
 class VIEW3D_PT_BOQM(bpy.types.Panel):
 
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
 
     bl_category = "BOQM"
-    bl_label = "Blender object quick menu"
+    bl_label = "Blender Mesh Quick Tool"
 
-    def draw(self, context):
+def draw(self, context):
         """define the layout of the panel"""
         layout = self.layout
 
@@ -30,14 +29,18 @@ class VIEW3D_PT_BOQM(bpy.types.Panel):
         layout.row().operator("mesh.primitive_cone_add", text="Add Cone")
         layout.row().operator("mesh.primitive_ico_sphere_add", text="Add Icosphere")
         layout.row().operator("mesh.primitive_plane_add", text="Add Plane")
-        layout.row().operator("mesh.primitive_monkey_add", text="Add Monkey") 
-        layout.row().operator("mesh.primitive_torus_add", text="Add Torus")   
-        
-def register():
-    bpy.utils.register_class(VIEW3D_PT_BOQM)
+        layout.row().operator("mesh.primitive_monkey_add", text="Add Monkey")
+        layout.row().operator("mesh.primitive_torus_add", text="Add Torus")
 
-def unregister():
-    bpy.utils.unregister_class(VIEW3D_PT_BOQM)
+def draw(self, context):
+    layout = self.layout
 
-if __name__ == "__main__":
-    register()
+    pie = layout.menu_pie()
+    pie.operator("mesh.primitive_cube_add", text="Cube")
+    pie.operator("mesh.primitive_uv_sphere_add", text="UV Sphere")
+    pie.operator("mesh.primitive_cylinder_add", text="Cylinder")
+    pie.operator("mesh.primitive_cone_add", text="Cone")
+    pie.operator("mesh.primitive_ico_sphere_add", text="Icosphere")
+    pie.operator("mesh.primitive_plane_add", text="Plane")
+    pie.operator("mesh.primitive_monkey_add", text="Monkey")
+    pie.operator("mesh.primitive_torus_add", text="Torus")
