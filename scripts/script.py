@@ -31,16 +31,3 @@ def draw(self, context):
         layout.row().operator("mesh.primitive_plane_add", text="Add Plane")
         layout.row().operator("mesh.primitive_monkey_add", text="Add Monkey")
         layout.row().operator("mesh.primitive_torus_add", text="Add Torus")
-
-def draw(self, context):
-    layout = self.layout
-
-    pie = layout.menu_pie()
-    pie.operator("mesh.primitive_cube_add", text="Cube")
-    pie.operator("mesh.primitive_uv_sphere_add", text="UV Sphere")
-    pie.operator("mesh.primitive_cylinder_add", text="Cylinder")
-    pie.operator("mesh.primitive_cone_add", text="Cone")
-    pie.operator("mesh.primitive_ico_sphere_add", text="Icosphere")
-    pie.operator("mesh.primitive_plane_add", text="Plane")
-    pie.operator("mesh.primitive_monkey_add", text="Monkey")
-    pie.operator("mesh.primitive_torus_add", text="Torus")
