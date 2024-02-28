@@ -1,6 +1,6 @@
 bl_info = {
-    "name": "BOQM",
-    "description": "Blender Object Quick Menu",
+    "name": "BMQT",
+    "description": "Blender Mesh Quick Tool",
     "author": "c0rtex",
     "version": (0, 0, 1),
     "blender": (4, 0, 0),
@@ -10,16 +10,16 @@ bl_info = {
 }
 
 import bpy
-from bpy.types import Menu
-class VIEW3D_PT_BOQM(bpy.types.Panel):
+from bpy.types import Menu, Panel
+
+class VIEW3D_PT_BOQM(Panel, Menu):
 
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
-
-    bl_category = "BOQM"
+    bl_category = "BMQT"
     bl_label = "Blender Mesh Quick Tool"
 
-def draw(self, context):
+    def draw(self, context):
         """define the layout of the panel"""
         layout = self.layout
 
@@ -31,3 +31,12 @@ def draw(self, context):
         layout.row().operator("mesh.primitive_plane_add", text="Add Plane")
         layout.row().operator("mesh.primitive_monkey_add", text="Add Monkey")
         layout.row().operator("mesh.primitive_torus_add", text="Add Torus")
+
+def register():
+    bpy.utils.register_class(VIEW3D_PT_BOQM)
+
+def unregister():
+    bpy.utils.unregister_class(VIEW3D_PT_BOQM)
+
+if __name__ == "__main__":
+    register()
